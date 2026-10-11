@@ -212,4 +212,10 @@ if git -C "$ROOT" ls-files templates/v3 versions/referral versions/startup versi
 fi
 ok "no tracked LaTeX build artifacts in active surfaces"
 
+# Resume content follows the voice rule: no em dashes in actual resume content.
+# Check candidate-facing prose sources. LaTeX source files can contain comments
+# and metadata, so visible-text extraction remains part of PDF QA in CI.
+RESUME_PROSE=(versions/referral/_base.md versions/startup/_base.md versions/mnc/_base.md)
+assert_absent "resume content contains no em dashes" '—' "${RESUME_PROSE[@]}"
+
 ok "repository resume contract passed"

@@ -24,6 +24,7 @@ jobs:
       - name: Validator contract tests
         run: bash pipeline/test_validate_contract.sh
 
+
   build-resumes:
     needs: validate
     runs-on: ubuntu-latest
