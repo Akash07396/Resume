@@ -1,0 +1,49 @@
+\documentclass{../../../templates/v3/resume-openfont}
+\begin{document}
+
+\resumeHeader{Soham Datta}{Pune, India}{\href{mailto:thesohamdatta@gmail.com}{thesohamdatta@gmail.com} | +91 9420984066 | \href{https://www.linkedin.com/in/thesohamdatta/}{LinkedIn} | \href{https://github.com/thesohamdatta}{GitHub} | \href{https://sohamdatta.framer.ai}{Portfolio}}
+
+{\small\bfseries AI Engineering | Agentic Workflows | Context and Tool Integration}\par\vspace{2pt}
+\tightpar{AI/ML engineering graduate with hands-on work on developer harnesses, multi-provider LLM workflows, retrieval-based memory, MCP integrations, and automated verification. Evidence comes from independent projects and open-source contributions; enterprise program leadership and production-scale architecture are not claimed.}
+
+\section{Experience}
+\resumeRole{Aura}{Founder}{Jun 2026 -- Present}{Wearable AI system | AI integration | Under development}
+\begin{resumeitemize}
+\item Adapted and extended Omi ecosystem components for streaming audio, memory/context segmentation, knowledge-graph linking, speaker identification, and Supabase/pgvector vector memory.
+\item Integrated a Kubernetes-hosted Deepgram speech-recognition service into the Python/FastAPI streaming audio path; implemented ESP32-S3 audio capture at 16 kHz with I2S DMA, Opus compression, FreeRTOS event handling, and OTA updates.
+\end{resumeitemize}
+
+\resumeRole{Omi open-source contributions}{Contributor}{2024 -- 2026}{Agent-related software | Debugging | Testing | Design proposals}
+\begin{resumeitemize}
+\item Authored an offline speaker-clustering contribution with 52 tests; the contribution was closed unmerged, and its approach was later adopted downstream. Diagnosed a Windows Electron/WebGL GPU/compositor issue that was resolved downstream.
+\item Authored architecture proposals and specifications for speaker grounding and Windows file indexing; kept attribution to authored proposals and downstream adoption rather than claiming downstream implementation ownership.
+\end{resumeitemize}
+
+\section{Projects}
+\resumeProject{Mia: AI Engineering Harness}{\href{https://github.com/thesohamdatta/Mia}{GitHub}}{TypeScript | Bun | LLM adapters | Vitest | JSONL}
+\begin{resumeitemize}
+\item Built a five-stage engineering workflow (grill, spec, plan, review, ship) with adapters for Claude, Codex, and local models, plus structured skill executors for repeatable agent tasks.
+\item Used immutable JSONL state and automated lint, type-check, and Vitest gates; replaced a background daemon with stateless event-driven execution to simplify workflow state and control.
+\end{resumeitemize}
+
+\resumeProject{LLM-Council: Multi-Model Evaluation}{\href{https://github.com/thesohamdatta/LLM-Council}{GitHub}}{Python | FastAPI | React/Vite | OpenRouter}
+\begin{resumeitemize}
+\item Implemented an Analyst, Skeptic, Synthesizer workflow that compares responses from multiple LLM providers and synthesizes an answer through a FastAPI service and React client.
+\end{resumeitemize}
+
+\resumeProject{John: Realtime Voice Agent}{\href{https://github.com/thesohamdatta/John}{GitHub}}{Kotlin | Python | LiveKit | WebRTC | Tool calling}
+\begin{resumeitemize}
+\item Built an Android client connected to a Python LiveKit agent over WebRTC, with Silero VAD for turn and interruption handling and tool calling for calendar/task actions.
+\end{resumeitemize}
+
+\section{Education}
+\resumeEducation{Savitribai Phule Pune University (SPPU)}{2022 -- Jun 2026}{B.E. in Artificial Intelligence \& Machine Learning | Pune, India}
+
+\section{Technical Skills}
+\resumeSkills{AI engineering:}{LLM applications, agent workflows, context engineering, tool calling, model adapters, RAG concepts}
+\resumeSkills{Integration:}{MCP (Model Context Protocol), FastAPI, REST APIs, WebSockets, Supabase/pgvector}
+\resumeSkills{Testing and quality:}{Vitest, unit testing, lint/type-check gates, structured evaluation workflows, debugging}
+\resumeSkills{Languages and systems:}{Python, TypeScript/JavaScript, Kotlin, C/C++, ESP32-S3, FreeRTOS, I2S/DMA, Opus}
+\resumeSkills{Platforms and tools:}{Git/GitHub, Bun, React, Kubernetes, OpenRouter, LiveKit, WebRTC}
+
+\end{document}
