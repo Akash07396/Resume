@@ -1,0 +1,34 @@
+Soham Datta
+Pune, India
+thesohamdatta@gmail.com | +91 9420984066 | LinkedIn | GitHub | Portfolio
+
+AI Engineering | Agentic Workflows | Context and Tool Integration
+AI/ML engineering graduate with hands-on work on developer harnesses, multi-provider LLM workflows, retrieval-based memory, MCP integrations, and automated verification. Evidence comes from independent projects and open-source contributions; enterprise program leadership and production-scale architecture are not claimed.
+
+Experience
+Aura | Founder | Jun 2026 -- Present
+Adapted and extended Omi ecosystem components for streaming audio, memory/context segmentation, knowledge-graph linking, speaker identification, and Supabase/pgvector vector memory.
+Integrated a Kubernetes-hosted Deepgram speech-recognition service into the Python/FastAPI streaming audio path; implemented ESP32-S3 audio capture at 16 kHz with I2S DMA, Opus compression, FreeRTOS event handling, and OTA updates.
+Omi open-source contributions | Contributor | 2024 -- 2026
+Authored an offline speaker-clustering contribution with 52 tests; the contribution was closed unmerged, and its approach was later adopted downstream. Diagnosed a Windows Electron/WebGL GPU/compositor issue that was resolved downstream.
+Authored architecture proposals and specifications for speaker grounding and Windows file indexing; kept attribution to authored proposals and downstream adoption rather than claiming downstream implementation ownership.
+
+Projects
+Mia: AI Engineering Harness | TypeScript, Bun, LLM adapters, Vitest, JSONL
+Built a five-stage engineering workflow with adapters for Claude, Codex, and local models, plus structured skill executors for repeatable agent tasks.
+Used immutable JSONL state and automated lint, type-check, and Vitest gates; replaced a background daemon with stateless event-driven execution to simplify workflow state and control.
+LLM-Council: Multi-Model Evaluation | Python, FastAPI, React/Vite, OpenRouter
+Implemented an Analyst, Skeptic, Synthesizer workflow that compares responses from multiple LLM providers and synthesizes an answer through a FastAPI service and React client.
+John: Realtime Voice Agent | Kotlin, Python, LiveKit, WebRTC, tool calling
+Built an Android client connected to a Python LiveKit agent over WebRTC, with Silero VAD for turn and interruption handling and tool calling for calendar/task actions.
+
+Education
+Savitribai Phule Pune University (SPPU) | 2022 -- Jun 2026
+B.E. in Artificial Intelligence & Machine Learning | Pune, India
+
+Technical Skills
+AI engineering: LLM applications, agent workflows, context engineering, tool calling, model adapters, RAG concepts
+Integration: MCP (Model Context Protocol), FastAPI, REST APIs, WebSockets, Supabase/pgvector
+Testing and quality: Vitest, unit testing, lint/type-check gates, structured evaluation workflows, debugging
+Languages and systems: Python, TypeScript/JavaScript, Kotlin, C/C++, ESP32-S3, FreeRTOS, I2S/DMA, Opus
+Platforms and tools: Git/GitHub, Bun, React, Kubernetes, OpenRouter, LiveKit, WebRTC
