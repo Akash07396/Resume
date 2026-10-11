@@ -3,7 +3,7 @@ Pune, India
 thesohamdatta@gmail.com | +91 9420984066 | LinkedIn | GitHub | Portfolio
 
 AI Engineering | Agentic Workflows | Context and Tool Integration
-AI/ML engineering graduate with hands-on work on developer harnesses, multi-provider LLM workflows, retrieval-based memory, MCP integrations, and automated verification. Evidence comes from independent projects and open-source contributions; enterprise program leadership and production-scale architecture are not claimed.
+I’ve built a CLI for AI-assisted development and a tool for comparing LLM responses. I’ve also integrated retrieval and memory features into a wearable AI project.
 
 Experience
 Aura | Founder | Jun 2026 -- Present
