@@ -29,7 +29,7 @@ Template: `templates/v3/resume-openfont.cls` canonical template; content-only ad
 
 ## Gate review
 
-- FACT: PASS by content review. Candidate claims are grounded in canonical facts/evidence; Omi statuses retain accurate attribution.
+- FACT: PASS by content review. Summary uses direct, concrete wording; project and contribution claims remain grounded in canonical facts/evidence; Omi statuses retain accurate attribution.
 - FIT: PARTIAL. Core agent/context evidence is surfaced, but several mandatory seniority/enterprise expectations lack evidence.
 - READ: PASS. One-page PDF visually inspected; content remains scannable.
 - PARSE: PASS. Text extracted from the compiled PDF; contact information, section headings, links and skills are readable.
