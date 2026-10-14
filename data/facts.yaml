@@ -1,5 +1,6 @@
 # Single source of truth for resume facts
-# Evidence and truth boundaries are maintained in content/github/.
+# Keep verified identity, dates, role titles, and resume bullets here.
+# Technical detail and supporting evidence are maintained in content/github/.
 
 personal:
   name: "Soham Datta"
@@ -31,6 +32,34 @@ experience:
     dates: "Jun 2026 – Present"
     status: "Under development"
     tags: "Wearable AI · Embedded Systems · Multimodal AI · Open Source"
+    scope:
+      summary: "Independent open-source AI pendant that connects wearable audio and image capture to a backend for searchable memory and recall, with an Android companion app."
+      hardware:
+        - "Seeed XIAO ESP32-S3 Sense microcontroller"
+        - "Digital microphone and OV2640 camera"
+        - "Wi-Fi and Bluetooth Low Energy"
+        - "Custom CAD and 3D-printed wearable enclosure"
+      firmware:
+        - "C/C++ firmware"
+        - "I2S DMA circular-buffer audio capture at 16 kHz"
+        - "Opus audio compression"
+        - "FreeRTOS event handling"
+        - "OTA firmware update support"
+        - "Camera capture and BLE/audio streaming paths"
+      software_integrations:
+        - "FastAPI backend components for transcription, vision analysis, AI chat, and memory workflows"
+        - "Streaming audio ingestion and memory/context extraction or segmentation"
+        - "Knowledge-graph entity and relationship linking"
+        - "MCP server integration and speaker-identification functionality"
+        - "Deepgram speech recognition integration"
+        - "Vector-memory work with Supabase/pgvector; Aura repository documentation also identifies Pinecone in backend configuration"
+        - "Android companion app and interface work"
+      contribution_scope: "Adapted, integrated, and extended existing Omi ecosystem components alongside independent device, firmware, interface, and software work."
+      evidence_source: "content/github/evidence.md"
+      attribution_limits:
+        - "Aura is under development; do not claim production scale, customers, funding, revenue, or user traction."
+        - "Do not claim that the Omi backend was built from scratch or that the full backend architecture is owned independently."
+        - "Do not claim measured battery life, latency, accuracy, or other performance numbers without new evidence."
     bullets:
       referral:
         - "Built Aura, an independent wearable AI system spanning hardware, firmware, software, and AI integrations."
@@ -52,6 +81,18 @@ experience:
     duration: "10 weeks"
     support: "AICTE internship program"
     tags: "Computer Vision · TensorFlow · TensorFlow Lite · Google ML Kit · Android"
+    scope:
+      summary: "Ten-week virtual AI/ML internship focused on practical computer-vision workflows and mobile/on-device inference."
+      workstreams:
+        - "Custom object detection and tracking"
+        - "Image classification and integration of .tflite models"
+        - "EfficientDet-Lite and TFLite Model Maker/Task Library"
+        - "TensorFlow, TensorFlow Lite, Google ML Kit, Google Cloud Vision API, and Colab workflows"
+        - "Android/mobile inference"
+      evidence_source: "content/github/evidence.md"
+      attribution_limits:
+        - "Describe this as an AICTE internship program, not employment at Google."
+        - "No verified accuracy, mAP, dataset size, latency, or production-deployment metrics are available."
     bullets:
       referral:
         - "Built hands-on computer-vision workflows using TensorFlow, TFLite, and Google ML Kit across custom object detection, image classification, and Android inference."
@@ -65,6 +106,18 @@ experience:
     company: "Reliance"
     dates: "Jul 2024 – Oct 2024"
     tags: "Customer Service · POS · Store Operations · Reporting"
+    scope:
+      summary: "Customer-facing store operations and service support, with POS, membership, voucher, exchange, documentation, and reporting tasks."
+      responsibilities:
+        - "Handled customer-service desk queries and follow-up"
+        - "Supported POS transactions, membership and voucher workflows, and exchanges"
+        - "Supported inventory/store workflows, reporting, data maintenance, and documentation"
+        - "Coordinated issue resolution with managers and store teams"
+      evidence_source: "content/github/evidence.md"
+      attribution_limits:
+        - "Keep the official title as Associate."
+        - "Do not use the historical 50% improvement metric without independent evidence."
+        - "Do not present this role as software engineering or advanced SAP administration."
     bullets:
       referral:
         - "Managed customer-service, POS, membership, voucher, exchange, documentation, and daily follow-up workflows while coordinating issue resolution with store teams."
@@ -79,6 +132,21 @@ experience:
     dates: "Sep 2023 – Mar 2024"
     tags: "Research Support · Digital Library · Documentation · Student Support"
     scale: "3,000+ pages of material archived or organised"
+    scope:
+      summary: "Supported academic literature discovery, digital-library resources, digitisation, documentation, and student access to digital learning material."
+      responsibilities:
+        - "Discovered literature and resources across books, articles, research repositories, and open-courseware platforms"
+        - "Organised and digitised books, documents, records, and annual institutional material"
+        - "Worked with DELNET and OPAC resources"
+        - "Prepared formatting, tables, figures, citations, references, and research documentation using LaTeX where appropriate"
+        - "Helped students and staff find and use digital learning resources"
+        - "Supported workshops and awareness activities around open courseware, arXiv, coding resources, and online learning"
+        - "Worked under professor and librarian review"
+      evidence_source: "content/github/experience_ps_modern_institute.md"
+      attribution_limits:
+        - "The role was research and library support, not sole authorship of professor-led publications."
+        - "Do not claim student counts, workshop counts, campaign reach, or measurable learning outcomes without evidence."
+        - "Do not describe archive organisation as Git/version control."
     bullets:
       referral:
         - "Supported academic research and digital-library workflows across literature discovery, documentation, digitization, and organisation of 3,000+ pages of material."
@@ -92,6 +160,18 @@ projects:
     title: "Mia · Personal AI Engineering OS"
     repo: "https://github.com/thesohamdatta/Mia"
     tags: "TypeScript · Bun · LLM Adapters · Vitest · JSONL"
+    scope:
+      summary: "Local-first TypeScript CLI for explicit AI-assisted engineering workflows, durable work records, evidence-backed verification, and resumable context."
+      architecture:
+        - "Five-stage workflow: grill → spec → plan → review → ship"
+        - "Adapters for Anthropic Claude, OpenAI Codex, and local models"
+        - "Immutable JSONL state tracking and stateless event-driven execution after ADR-0001"
+        - "Structured skill executors and integration tests"
+        - "Lint, typecheck, and Vitest verification gates"
+        - "Host model execution and tool routing remain outside MIA; it provides workflow and state rather than a fully autonomous agent loop"
+      evidence_source: "content/github/evidence.md"
+      attribution_limits:
+        - "Do not claim production deployment, user adoption, or fully autonomous software engineering without evidence."
     evidence:
       - "5-stage harness: grill → spec → plan → review → ship"
       - "Multi-host adapters for Anthropic Claude, OpenAI Codex, and local models"
@@ -104,6 +184,15 @@ projects:
     title: "LLM-Council · Multi-Model Consensus Engine"
     repo: "https://github.com/thesohamdatta/LLM-Council"
     tags: "Python · FastAPI · React/Vite · OpenRouter"
+    scope:
+      summary: "Research tool and deliberation dashboard that visualises staged analysis, critique, and synthesis across multiple language models."
+      architecture:
+        - "Analyst generates independent responses"
+        - "Skeptic audits responses for reasoning gaps, logical issues, and quality"
+        - "Chairman/Synthesizer consolidates findings and distinguishes consensus from uncertainty"
+        - "Python/FastAPI backend with React/Vite frontend and OpenRouter provider gateway"
+        - "Response comparison and synthesis UI"
+      evidence_source: "content/github/evidence.md"
     evidence:
       - "Multiple LLM providers"
       - "Analyst → Skeptic → Synthesizer pipeline"
@@ -114,6 +203,19 @@ projects:
     title: "John · Android Voice Client"
     repo: "https://github.com/thesohamdatta/John"
     tags: "Kotlin · Jetpack Compose · LiveKit · WebRTC · Python"
+    scope:
+      summary: "Voice-assistant project with an Android client, a LiveKit realtime voice agent, and a token-server component."
+      architecture:
+        - "Android client built with Kotlin and Jetpack Compose"
+        - "LiveKit/WebRTC realtime room communication"
+        - "Python LiveKit agent using a speech-to-text, LLM, and text-to-speech flow"
+        - "Node.js/Express token server for short-lived LiveKit access tokens"
+        - "RPC/tool-execution framework for Android actions, including tasks and calendar-related interactions"
+        - "Push-to-talk interaction; current project documentation describes some tool responses as mocked and several integrations as planned"
+      evidence_source: "content/github/evidence.md"
+      attribution_limits:
+        - "Do not describe planned integrations as shipped functionality."
+        - "Do not claim a production voice platform or verified real-user scale."
     evidence:
       - "Android LiveKit client"
       - "Python LiveKit agent"
@@ -127,12 +229,32 @@ projects:
       - "https://github.com/thesohamdatta/I-am-Mia"
       - "https://github.com/thesohamdatta/voicecoder"
     tags: "LiveKit · WebRTC · Silero VAD · Deepgram · ElevenLabs · Gemini Live · Sarvam"
+    scope:
+      summary: "Related experiments and applications for realtime voice interaction, speech processing, and voice-driven tools."
+      capabilities:
+        - "LiveKit/WebRTC realtime audio"
+        - "Silero VAD for voice activity detection, interruption/barge-in, and turn handling"
+        - "Speech-to-text and text-to-speech integrations with providers used in specific projects"
+        - "Tool calling and app integrations where implemented"
+      evidence_source: "content/github/evidence.md"
+      attribution_limits:
+        - "Attach each provider or capability to the specific project where evidence exists."
+        - "Do not describe the collection as a production voice platform."
     bullet: "Built and tested realtime voice-agent systems across streaming audio, VAD, STT, TTS, and tool calling."
 
   - id: voicecoder
     title: "voicecoder"
     repo: "https://github.com/thesohamdatta/voicecoder"
     tags: "VS Code Extension · Multi-provider AI · Credential Storage"
+    scope:
+      summary: "VS Code AI assistance project supporting code analysis and explanation through multiple model providers; its README notes an ongoing architecture migration toward integrated IDE voice assistance."
+      architecture:
+        - "Provider implementations for Anthropic, OpenAI, Google Gemini, and Ollama/local models, as documented in the README"
+        - "Provider selection and fallback"
+        - "Credentials stored using VS Code Secret Storage"
+        - "Usage and cost statistics"
+        - "Current architecture is changing; verify current implementation before presenting legacy extension features as active"
+      evidence_source: "content/github/evidence.md"
     evidence:
       - "Multi-provider fallback"
       - "Secure credential storage"
@@ -156,6 +278,10 @@ projects:
   - id: microgpt
     title: "Microgpt124M"
     tags: "PyTorch · Transformers"
+    scope:
+      summary: "Implementation/work exploring a 124M-parameter decoder-only transformer in PyTorch."
+      attribution_limits:
+        - "Describe this as an implementation/work only to the extent supported by the linked code; do not imply model training or deployment results without evidence."
     bullet: "124M-parameter decoder-only transformer implementation in PyTorch."
 
 open_source:
@@ -169,6 +295,53 @@ open_source:
     authored_prs_merged_directly: 0
     documented_tests: "120+"
     diarization_tests: 52
+  detail:
+    role_in_resume: "Supporting engineering evidence under Aura, not a separate employment role."
+    technical_areas:
+      - "Desktop GPU/compositor diagnosis involving Windows Electron, WebGL, CSS backdrop filtering, and a React Three Fiber canvas"
+      - "Offline speaker clustering using agglomerative hierarchical clustering and SciPy cosine linkage"
+      - "Speaker grounding for action-item extraction"
+      - "Safer parsing for Redis-related paths"
+      - "Centralised web product/configuration/deep-link behaviour with integration tests"
+      - "Windows database-path isolation, WebSocket error classification, and OCR pacing"
+      - "Windows local file-indexing specification"
+      - "Markdown export specification"
+    selected_evidence:
+      - id: "issue_8438"
+        summary: "Diagnosed Windows Electron/WebGL GPU/compositor issue; downstream resolution in PR #8902."
+        attribution: "The downstream PR was not authored by the candidate."
+      - id: "pr_8919"
+        summary: "Authored offline speaker clustering with 52 tests; closed unmerged; approach adopted downstream in PR #12471."
+        attribution: "Authored contribution; not a merged PR."
+      - id: "issue_8918"
+        summary: "Authored speaker-grounding proposal; adopted downstream in PR #12089."
+        attribution: "The downstream PR was not authored by the candidate."
+      - id: "issue_8991"
+        summary: "Authored Windows local file-indexing specification; downstream implementation followed."
+      - id: "issue_12360"
+        summary: "Authored Markdown export specification; draft PR #12927 was not merged."
+      - id: "pr_7379"
+        summary: "Security hardening through safer parsing; maintainer-approved, closed unmerged."
+      - id: "pr_7654"
+        summary: "Web/configuration refactor with 13 web integration tests; maintainer-approved, closed unmerged."
+      - id: "pr_8442"
+        summary: "Windows database/OCR/WebSocket work and tests; positively reviewed, closed unmerged."
+      - id: "pr_8352"
+        summary: "Type-safety changes for TypeScript fixtures; changes requested, closed unmerged."
+    architectural_rfc_issue_numbers:
+      - 8029
+      - 8452
+      - 8453
+      - 8912
+      - 8985
+      - 8991
+      - 12360
+      - 7628
+    attribution_limits:
+      - "Seven authored PRs; three approved by maintainers; zero authored PRs merged directly."
+      - "Do not claim Omi maintainer/core-contributor status."
+      - "Do not claim authorship of downstream PRs."
+      - "Use authored, diagnosed, proposed, approved by maintainers, adopted downstream, or addressed downstream as appropriate."
   selected_evidence:
     - "Diagnosed GPU/compositor issue #8438; downstream resolution in PR #8902."
     - "Authored offline speaker clustering in PR #8919 with 52 tests; adopted downstream in PR #12471."
