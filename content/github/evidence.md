@@ -10,24 +10,19 @@ Evidence snapshot:
 - 1,562 repository files across hardware, firmware, backend, and infrastructure at the cited snapshot.
 
 ### Hardware / firmware
-- ESP32-S3 firmware in C/C++.
-- I2S DMA circular-buffer audio capture at 16 kHz.
-- On-device Opus compression.
+- ESP32-S3 firmware in C/C++ for the Seeed XIAO ESP32-S3 Sense wearable platform.
+- Firmware README names `firmware/src/app.cpp`, `mic.cpp`, and `opus_encoder.cpp`; it documents 16 kHz microphone sampling, periodic camera capture, audio compression, and OTA support.
+- I2S DMA circular-buffer audio capture at 16 kHz and on-device Opus compression.
 - FreeRTOS event handling for device services.
-- OTA firmware update support.
-- Custom 3D CAD enclosure for the wearable form factor.
-- Physical integration of camera, microphone, battery, and wearable enclosure.
+- Custom 3D CAD enclosure and physical integration of camera, microphone, battery, and wearable enclosure.
+- Aura top-level README describes a digital microphone, OV2640 camera, Wi-Fi/BLE connectivity, backend, and Android companion app.
 
 ### Software / backend
-- FastAPI backend components.
-- Streaming audio ingestion.
-- Memory/context extraction and segmentation.
-- Knowledge-graph entity/relationship linking.
-- MCP server integration.
-- Speaker-identification functionality.
-- Kubernetes-hosted Deepgram ASR integration.
-- Supabase/pgvector vector-memory storage.
-- Frontend/mobile/interface work.
+- FastAPI backend components for transcription, vision analysis, memory storage, AI chat, and streaming audio ingestion.
+- Memory/context extraction and segmentation, knowledge-graph entity/relationship linking, MCP server integration, and speaker-identification functionality.
+- Repository backend README lists Deepgram for speech-to-text, GPT-4o for vision, Pinecone for vector storage, and LangGraph for agent workflows; Firebase/Firestore setup is also documented. Supabase/pgvector appears in the existing experience record and should be treated as project-specific work, not necessarily the same active backend configuration.
+- Kubernetes-hosted Deepgram ASR integration, as documented in the existing engineering record.
+- Frontend/mobile/interface work, including an Android companion-app codebase.
 
 ### Boundary
 Aura backend work includes adaptation, integration, and extension of existing Omi ecosystem components. Do not describe the Omi backend as built from scratch or claim deep backend expertise.
