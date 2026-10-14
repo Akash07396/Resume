@@ -143,6 +143,35 @@ Evidence:
 
 Do not use the historical 50% improvement metric without new evidence.
 
+## Additional project-level implementation notes
+
+These details are based on the linked repositories' current README files and should be read with the project-specific boundaries above.
+
+### Aura repository documentation
+- The pendant is documented as a Seeed XIAO ESP32-S3 Sense with a digital PDM microphone and OV2640 camera, connected over Wi-Fi/Bluetooth to a FastAPI backend and Android companion app.
+- Firmware documentation names `firmware/src/app.cpp`, `mic.cpp`, and `opus_encoder.cpp`; configuration notes include 16 kHz microphone sampling and periodic camera capture.
+- The backend README lists speech-to-text via Deepgram, vision via GPT-4o, Pinecone vector storage, and LangGraph agent components. These repository-level technologies describe the codebase; only claim hands-on depth for components actually implemented or integrated by the candidate.
+- Current Aura backend directory includes a FastAPI entry point and separate routers, database, and utility areas. Treat this as codebase structure, not evidence that the full backend was authored from scratch.
+- Repository overview describes audio and image frames flowing into backend memory and recall, with an Android companion app. Aura remains under development.
+
+### Mia project documentation
+- Current README describes Mia as a local-first Bun/TypeScript CLI for explicit AI-assisted engineering workflows, durable work records, bounded skill execution, verification evidence, and resumable local context.
+- The host remains responsible for the model loop and tool routing. Mia should not be described as a fully autonomous agent framework.
+- The current documented workflow is intent clarification → plan/specification → skill execution → review/verification → recording outcomes and learnings. Use the earlier five-stage naming only where the underlying version/workflow supports it.
+
+### LLM-Council project documentation
+- README describes a three-stage deliberation dashboard: Analyst produces independent responses, Skeptic audits the responses for logical issues and gaps, and Chairman/Synthesizer produces a final synthesis while distinguishing consensus from uncertainty.
+- The documented stack includes Python 3.10+, Node.js 18+, FastAPI, React, and OpenRouter. Do not add evaluation metrics or claim that model outputs are objectively correct without evidence.
+
+### John project documentation
+- README documents an Android client, a Node.js/Express token server, and a Python LiveKit agent with a speech-to-text, LLM, and text-to-speech flow.
+- The Android side is documented under Kotlin/Jetpack Compose, with LiveKit room communication and RPC handlers.
+- README describes push-to-talk and some mock tool responses; real calendar/SMS/search integrations and persistence are described as planned. Resume bullets must distinguish working flow from planned capabilities.
+
+### voicecoder project documentation
+- README lists Anthropic, OpenAI, Google Gemini, and Ollama/local model providers, provider selection, VS Code Secret Storage, and usage/cost statistics.
+- README also states the project is migrating from extension-based assistance toward integrated voice assistance in the IDE. Verify active implementation before describing legacy features as current.
+
 ## Technical stack evidence map
 
 Languages: Python, TypeScript/JavaScript, Kotlin, C/C++  
