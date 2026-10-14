@@ -140,6 +140,15 @@ Do not say:
 ### Do not claim
 - Production voice platform or verified real-user scale.
 
+## Project documentation boundaries
+
+- Aura repository documentation lists FastAPI, Deepgram, GPT-4o vision, Pinecone, and LangGraph in its backend overview. The broader evidence record also documents Supabase/pgvector work. Do not imply every listed provider was used in the same active configuration; confirm the specific component and version before making a resume claim.
+- Aura firmware README describes camera capture, audio capture, BLE/audio streaming, and OTA support. Use implementation-level specifics only where they are supported by the code or contribution history.
+- Mia's current README describes a local-first engineering workflow tool. The host owns model execution and tool routing. Do not call Mia fully autonomous, and use the current workflow wording rather than stale stage names unless a specific version is being described.
+- John documentation distinguishes implemented voice interaction and mocked tool responses from integrations marked planned. Do not claim real calendar, SMS, search, or persistence integrations as shipped without current implementation evidence.
+- VoiceCoder documentation says the project is migrating from a VS Code extension toward integrated IDE voice assistance. Verify the present implementation before describing older extension features as active.
+- LLM-Council documentation describes staged analysis, critique, and synthesis. Do not claim objective correctness, quantified model-quality gains, or evaluation benchmark results without measurements.
+
 ## General writing constraints
 
 Avoid generic buzzwords such as passionate, innovative, cutting-edge, leveraged, spearheaded, transformative, next-generation, disruptive, game-changing, revolutionary.
