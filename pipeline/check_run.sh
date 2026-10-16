@@ -51,11 +51,9 @@ for f in resume.tex extracted.txt audit.md; do
   [ -f "$run/output/$f" ] || fail "output/ is missing $f (REQ-O5)"
 done
 
-# The delivered resume must use a canonical template (REQ-C1).
-# Two canonical templates are accepted: the openfont class and the supplied
-# templates/v3/main.tex. A run may use either; neither may be forked per JD.
+# The delivered resume must use the shared canonical template (REQ-O3).
 grep -qE 'templates/1/resume' "$run/output/resume.tex" \
-  || fail "output/resume.tex does not use a canonical template (REQ-C1)"
+  || fail "output/resume.tex does not use the canonical template (REQ-O3)"
 
 # The extraction proof must read as a resume, not a stub (REQ-O5, REQ-V1).
 extract="$run/output/extracted.txt"

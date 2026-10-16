@@ -25,9 +25,11 @@ Two phases enforce them.
 |---|---|
 | The JD | `applications/{Name}_{YYYY-MM}/input.md` (schema: `applications/_template/input.md`) |
 | Mode settings | `modes/{mode}.yaml` |
-| Mode content | `versions/{mode}/_base.md` |
+| Mode content (editable) | `versions/{mode}/_base.md` |
+| Generated mode TeX | `versions/{mode}/resume.tex` (`pipeline/render_mode.py`) |
 | Truth | `data/facts.yaml` · `content/github/evidence.md` · `content/github/boundaries.md` |
-| Renderer | `templates/1/` |
+| LaTeX template | `templates/1/` |
+| Mode Markdown renderer | `pipeline/render_mode.py` |
 
 Rules: `RESUME_RULES.md`. Contract and precedence: `AGENTS.md`.
 
@@ -109,7 +111,10 @@ FACT gate instead of shipping.
 page, ATS-extractable, company/role match input, every claim sourced); each must read `yes`.
 `pipeline/check_run.sh` enforces it (REQ-O5).
 
-The three mode bases stay at `versions/{mode}/resume.tex` and compile to one page.
+`versions/{mode}/_base.md` is the only editable mode-content source. Regenerate its TeX with
+`python3 pipeline/render_mode.py {mode} --write`; repository validation checks that the checked-in
+TeX matches the Markdown. The base build compiles into a temporary directory, keeping PDF and
+LaTeX build files out of the repository.
 
 ## Reproducing a run
 

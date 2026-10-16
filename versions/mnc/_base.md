@@ -2,7 +2,7 @@
 
 **AI Engineer | LLM Systems | Software Engineer**
 
-Pune, India · thesohamdatta@gmail.com · +91 9420984066 · LinkedIn · GitHub · Portfolio
+Pune, India · thesohamdatta@gmail.com · +91 9420984066 · [LinkedIn](https://www.linkedin.com/in/thesohamdatta/) · [GitHub](https://github.com/thesohamdatta) · [Portfolio](https://sohamdatta.framer.ai)
 
 ## Summary
 
@@ -23,19 +23,19 @@ AI/ML graduate working across LLM applications, retrieval and context workflows,
 - Built computer-vision workflows for object detection and image classification, integrating TensorFlow Lite models with Android inference.
 
 ### Reliance · Associate
-**Jul 2024 – Oct 2024**
+**Jul 2024 – Oct 2024** | Customer Operations
 
 - Supported customer-service, POS, membership, voucher, exchange, and reporting workflows with store teams.
 
 ### PES Modern College · Research / Library Assistant
-**Sep 2023 – Mar 2024**
+**Sep 2023 – Mar 2024** | Research Support · Digital Library
 
 - Supported research documentation, literature discovery, and digitization; organized 3,000+ pages of archive material.
 
 ## Projects
 
 ### Omi · Speaker Clustering
-**GitHub** · Agglomerative hierarchical clustering | SciPy cosine linkage
+ [GitHub](https://github.com/BasedHardware/omi) · Agglomerative hierarchical clustering | SciPy cosine linkage
 
 - Authored an offline speaker-clustering implementation using agglomerative hierarchical clustering and SciPy cosine linkage, with 52 tests, in a closed unmerged PR; its approach was later adopted downstream.
 

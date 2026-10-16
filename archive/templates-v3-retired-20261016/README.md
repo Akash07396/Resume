@@ -1,6 +1,9 @@
-# Canonical LaTeX Template
+# Retired v3 LaTeX Template Snapshot
 
-`v3/` is the single active LaTeX template for the resume system.
+This directory preserves the former v3 LaTeX template, its fonts, and license. It is historical
+material and must not be used for new application runs. The active template is
+`templates/1/resume.cls`; its layout retains the approved Lato styling while sharing one class
+interface across the three modes.
 
 Build with:
 
@@ -8,12 +11,9 @@ Build with:
 xelatex resume.tex
 ```
 
-## Rules
+## Historical rules
 
-- Keep one canonical active template.
-- Do not create cosmetic template variants.
-- Preserve one-page output, readable type, clear hierarchy, predictable order, and ATS-safe searchable text.
-- Do not embed critical candidate information in images, decorative objects, or parser-hostile structures.
-- Shared fonts remain in `v3/fonts/`.
+- This snapshot is retained for provenance and comparison only.
+- The files here are not active build inputs.
 
-Older templates such as `v2-comma-titles`, `templates/main.tex`, and other generations are reference/history material. They must not be used for new application runs unless the pipeline records a specific reason.
+The prior template's license and bundled font files remain beside the snapshot.

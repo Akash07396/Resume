@@ -5,6 +5,14 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 fail() { echo "FAIL: $*" >&2; exit 1; }
 ok() { echo "PASS: $*"; }
 
+PY=""
+if command -v python3 >/dev/null 2>&1 && python3 -c 'import sys' 2>/dev/null; then
+  PY=python3
+elif command -v python >/dev/null 2>&1 && python -c 'import sys' 2>/dev/null; then
+  PY=python
+fi
+[ -n "$PY" ] || fail "no working Python interpreter found"
+
 # Fail if a pattern matches any of the given files (paths relative to $ROOT).
 assert_absent() {
   local desc="$1" pattern="$2"; shift 2
@@ -32,6 +40,7 @@ CANON=(
   modes/startup.yaml
   modes/mnc.yaml
   templates/1/resume.cls
+  pipeline/render_mode.py
   pipeline/check_run.sh
   pipeline/check_audit.py
   pipeline/check_metrics.py
@@ -85,9 +94,10 @@ for mode in "${MODES[@]}"; do
   test -f "$ROOT/versions/$mode/resume.tex" || fail "missing $mode resume.tex"
   grep -qF '\documentclass{../../templates/1/resume}' "$ROOT/versions/$mode/resume.tex" \
     || fail "$mode does not use the canonical template"
+  "$PY" "$ROOT/pipeline/render_mode.py" "$mode" --check || fail "$mode generated TeX is stale"
   grep -qE '^name_key:' "$ROOT/modes/$mode.yaml" || fail "$mode config missing name_key"
 done
-ok "all three modes have a config, a base, and use templates/1"
+ok "all three modes have a config, a canonical Markdown source, current generated TeX, and use templates/1"
 
 # --- modes are exactly the canonical three (REQ-P2) ---
 expected_modes="$(printf '%s\n' "${MODES[@]}" | sort)"
