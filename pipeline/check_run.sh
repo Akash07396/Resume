@@ -22,10 +22,16 @@ elif command -v python >/dev/null 2>&1 && python -c 'import sys' 2>/dev/null; th
 fi
 [ -n "$PY" ] || fail "no working Python interpreter found (REQ-V1)"
 
-# Windows-native paths so the native Python interpreter can open them from MSYS.
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd -W)"
-RUN_DIR="$(cd "$run" && pwd -W)"
-ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd -W)"
+# Resolve paths in Bash first. Convert them for native Windows Python when this
+# script runs under MSYS; keep POSIX paths on Linux and other Unix hosts.
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+RUN_DIR="$(cd "$run" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+if command -v cygpath >/dev/null 2>&1; then
+  SCRIPT_DIR="$(cygpath -w "$SCRIPT_DIR")"
+  RUN_DIR="$(cygpath -w "$RUN_DIR")"
+  ROOT_DIR="$(cygpath -w "$ROOT_DIR")"
+fi
 
 input="$run/input.md"
 [ -f "$input" ] || fail "missing input.md (the only file a run requires) (REQ-P1)"
