@@ -107,7 +107,7 @@ lens. Nothing else changes between runs.
 | Boundaries | claim / ownership / status limits | `content/github/boundaries.md` |
 | Modes | per-mode settings | `modes/{mode}.yaml` |
 | Bases | per-mode content | `versions/{mode}/_base.md` |
-| Template | the only visual foundation | `templates/v3/` |
+| Template | the only visual foundation | `templates/1/` |
 | Runs | per-application input and output | `applications/{Name}_{YYYY-MM}/` |
 | Checks | deterministic repository validation | `pipeline/validate_resume_repo.sh` |
 | Lessons | durable, evidence-backed learnings | `memory/lessons.md` |
@@ -329,7 +329,7 @@ data/facts.yaml        candidate facts
 content/github/        evidence.md, boundaries.md, and related proof
 modes/{mode}.yaml      per-mode settings
 versions/{mode}/       per-mode base content and rendered base
-templates/v3/          the only visual template
+templates/1/          the only visual template
 pipeline/              workflow, validation, build
 applications/          per-run inputs and outputs
 research/              external research (never candidate facts)

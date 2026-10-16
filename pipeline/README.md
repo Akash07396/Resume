@@ -27,7 +27,7 @@ Two phases enforce them.
 | Mode settings | `modes/{mode}.yaml` |
 | Mode content | `versions/{mode}/_base.md` |
 | Truth | `data/facts.yaml` · `content/github/evidence.md` · `content/github/boundaries.md` |
-| Renderer | `templates/v3/` |
+| Renderer | `templates/1/` |
 
 Rules: `RESUME_RULES.md`. Contract and precedence: `AGENTS.md`.
 
@@ -57,7 +57,7 @@ Turn the evidence plan into the one-page PDF.
 
 1. Write the draft in the fixed section order, using the mode's content (`_base.md`) and the
    chosen depth. Never change dates, titles, ownership, employers, or project scope.
-2. Populate `templates/v3/`. Preserve its structure; replace content only. Keep critical
+2. Populate `templates/1/`. Preserve its structure; replace content only. Keep critical
    information as real text and keep hyperlinks.
 3. Compile with XeLaTeX into a temporary build directory so `.aux`/`.log`/`.out` never enter
    the repo.

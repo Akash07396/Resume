@@ -30,7 +30,7 @@ Modes: `startup`, `mnc`, `referral`. A mode changes emphasis and selection; it n
 | Voice and language | `docs/voice.md` |
 | Hard resume constraints | `DONT.MD` |
 | Mode settings and base content | `modes/{mode}.yaml`, `versions/{mode}/_base.md` |
-| Canonical visual template | `templates/v3/` |
+| Canonical visual template | `templates/1/` |
 | Application input and output | `applications/{Name}_{YYYY-MM}/` |
 | External research, not candidate facts | `research/` |
 | Durable lessons | `memory/lessons.md` |
